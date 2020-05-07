@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 interface ContainerProps {
   size?: 'small' | 'large';
+  pathname: string;
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -18,10 +19,13 @@ export const Container = styled.div<ContainerProps>`
 
     nav {
       a {
+        display: inline-block;
         color: #fff;
         text-decoration: none;
         font-size: 16px;
         transition: opacity 0.2s;
+        padding-bottom: 10px;
+        position: relative;
 
         & + a {
           margin-left: 32px;
